@@ -46,7 +46,7 @@ const TopSelling = () => {
   ];
 
   return (
-    <div className="container flex flex-col items-center justify-center p-6 mx-auto mb-10 space-y-16">
+    <div id="brand" className="container flex flex-col items-center justify-center p-6 mx-auto mb-10 space-y-16">
       <h1 className="mb-4 text-4xl text-center text-black font-bold-1">
         TOP SELLING
       </h1>

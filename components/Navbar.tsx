@@ -77,7 +77,7 @@ const Navbar = () => {
             New Arrivals
           </Link>
           <Link
-            href="#"
+            href="#brand"
             className="block text-gray-700 transition duration-150 hover:text-black"
           >
             Brands
@@ -123,7 +123,7 @@ const Navbar = () => {
               New Arrivals
             </Link>
             <Link
-              href="#"
+              href="#brand"
               className="text-gray-700 transition duration-150 hover:text-black underline-hover"
             >
               Brands
