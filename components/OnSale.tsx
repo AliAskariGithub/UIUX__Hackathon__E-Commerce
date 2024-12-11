@@ -2,53 +2,58 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 
-const TopSelling = () => {
+const OnSale = () => {
   const products = [
     {
-      id: "9",
-      name: "Plane Ornage Shirt",
-      ratestar: "★★★★★",
-      rating: 5,      
-      fakeprice: "$232",
-      discount: "-20%",
-      price: "$212",
-      image:
-        "/images/shirt5.png",
-    },
-    {
-      id: "13",
-      name: "Polo with Contrast Trims",
-      ratestar: "★★★★",
-      rating: 4,
-      price: "$212",
-
-      image:
-        "/images/shirt6.png",
-    },
-    {
-      id: "14",
-      name: "Loose Fit Bermuda Shorts",
-      ratestar: "★★★",
-      rating: 3,
-      price: "$80",
-      image:
-        "/images/pent2.png",
-    },
-    {
-      id: "15",
-      name: "Faded Skinny Jeans",
+      id: "1",
+      name: "Viscose blend shirt",
       ratestar: "★★★★☆",
       rating: 4.5,
-      price: "$210",
+      price: "$100",
+      fakeprice: "$190",
+      discount: "-40%",
       image:
-        "/images/pent3.png",
+        "/images/shirt11.png",
+    },
+    {
+      id: "2",
+      name: "Mock Neck Zipper Sweatshirt",
+      ratestar: "★★★☆☆",
+      rating: 3.5,
+      price: "$150",
+      fakeprice: "$180",
+      discount: "-20%",
+      image:
+        "/images/shirt12.png",
+    },
+    {
+      id: "3",
+      name: "One life Graphic T-shirt",
+      ratestar: "★★★★☆",
+      rating: 4.5,
+      price: "$260",
+      fakeprice: "$300",
+      discount: "-40%",
+      image:
+        "/images/shirt10.png",
+    },
+    {
+      id: "4",
+      name: "Basic Skinny Jeans",
+      ratestar: "★★★★☆",
+      rating: 4.5,
+      price: "$160",
+      fakeprice: "$190",
+      discount: "-30%",
+      image:
+        "/images/pent4.png",
     },
   ];
 
   return (
-    <div id="brand" className="container flex flex-col items-center justify-center p-6 mx-auto mb-10 space-y-16">
+    <div id="onsale" className="container flex flex-col items-center justify-center p-6 mx-auto mb-10 space-y-16">
       <h1 className="mb-4 text-4xl text-center text-black font-bold-1">
-        TOP SELLING
+        ON SALE
       </h1>
 
       <div className="grid grid-cols-2 gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -95,4 +100,4 @@ const TopSelling = () => {
   );
 };
 
-export default TopSelling;
+export default OnSale;

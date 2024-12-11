@@ -14,7 +14,7 @@ const Testimonial = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Sarah M.",
+      name: "Kanwal ",
       rating: 5,
       feedback:
         "“I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”",
@@ -28,7 +28,7 @@ const Testimonial = () => {
     },
     {
       id: 3,
-      name: "Farah M.",
+      name: "Fizza F.",
       rating: 5,
       feedback:
         "“I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”",
@@ -47,6 +47,27 @@ const Testimonial = () => {
       feedback:
         "“As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.”",
     },
+    {
+      id: 6,
+      name:"Sumana Za.",
+      rating: 5,
+      feedback:
+        "“The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. I 've received so many compliments on it already. I can't wait to wear it again!”",
+    },
+    {
+      id: 7,
+      name: "Farah M.",
+      rating: 5,
+      feedback:
+        "“I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”",
+    },
+    {
+      id: 8,
+      name: "Irfan M.",
+      rating: 5,
+      feedback:
+        "“As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends”",
+    },
   ];
 
   return (
@@ -59,7 +80,7 @@ const Testimonial = () => {
           {testimonials.map((testimonial) => (
             <CarouselItem
               key={testimonial.id}
-              className="md:basis-1/3 p-6 bg-white rounded-lg shadow-md space-y-4"
+              className="sm:basis-1/2 md:basis-1/3  p-6 bg-white rounded-lg shadow-md space-y-4"
             >
               <p className="text-2xl text-yellow-500">
                 {"★ ".repeat(testimonial.rating).trim()}

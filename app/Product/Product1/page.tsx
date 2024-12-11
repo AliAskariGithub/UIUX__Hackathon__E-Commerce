@@ -27,24 +27,24 @@ const Product2 = () => {
     );
   };
 
-  const [selectedColor, setSelectedColor] = useState<string>("brown");
+  const [selectedColor, setSelectedColor] = useState<string>("lightblue");
   const [selectedSize, setSelectedSize] = useState<string>("Medium");
   const [selectedImage, setSelectedImage] = useState<string>(
-    "https://s3-alpha-sig.figma.com/img/6115/920b/12942762aefb7c7ac954e78b76284504?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GnB39R0poDoKWZVk7khTTTmcfh5KU-cvHy2m~8vJJhQFe6ExdCS-E70jqpei5gUbnr5nF9r2LTQ~09rrJsvnc4hbQztpuXBRvAMSxTmaDs~wB9EmwmTorwsWKBEMLHByHOcpL7mtAIxtXGltw5a1IlZfiHNzYcXE8azIvDc0WPCiwSa5H0Qgd3KFSHL9E65QbQG9uReF9mC1Fp5ZMsC8h~2f3bNgm4YiE6Z3MHMFgQyJqsgT1ulE4ldMv2CTwjXP9f5paEg2SgC55wX0xdJClZLS5s1PnKkyW7jot0U1TMd5J1g5T5CMv8Cxq17p1HfZB19f06~rwrhW4393RyMIWQ__",
+    "/images/shirt11.png",
   );
 
   const sizes = ["Small", "Medium", "Large", "X-Large"];
 
   const colors = [
-    { name: "brown", bgColor: "bg-[#4F4631]" },
+    { name: "lightblue", bgColor: "bg-[#7dd3fc]" },
     { name: "green", bgColor: "bg-[#314F4A]" },
     { name: "blue", bgColor: "bg-[#31344F]" },
   ];
 
   const images = [
     {
-      src: "https://s3-alpha-sig.figma.com/img/6115/920b/12942762aefb7c7ac954e78b76284504?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GnB39R0poDoKWZVk7khTTTmcfh5KU-cvHy2m~8vJJhQFe6ExdCS-E70jqpei5gUbnr5nF9r2LTQ~09rrJsvnc4hbQztpuXBRvAMSxTmaDs~wB9EmwmTorwsWKBEMLHByHOcpL7mtAIxtXGltw5a1IlZfiHNzYcXE8azIvDc0WPCiwSa5H0Qgd3KFSHL9E65QbQG9uReF9mC1Fp5ZMsC8h~2f3bNgm4YiE6Z3MHMFgQyJqsgT1ulE4ldMv2CTwjXP9f5paEg2SgC55wX0xdJClZLS5s1PnKkyW7jot0U1TMd5J1g5T5CMv8Cxq17p1HfZB19f06~rwrhW4393RyMIWQ__",
-      alt: "Black Stripted T-shirt",
+      src: "/images/shirt11.png",
+      alt: "Main T-shirt Image",
     }
   ];
 
@@ -167,7 +167,7 @@ const Product2 = () => {
           {/* Product Details */}
           <div>
             <h1 className="mb-2 text-2xl font-extrabold font-bold-1">
-            Black Stripted T-shirt
+            Viscose blend shirt
             </h1>
             <div className="flex items-center mb-4">
               <div className="flex text-yellow-500">
@@ -177,15 +177,15 @@ const Product2 = () => {
                 <AiFillStar />
                 <FaRegStarHalfStroke />
               </div>
-              <p className="ml-2 text-gray-600">5/5</p>
+              <p className="ml-2 text-gray-600">4.5/5</p>
             </div>
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-4">
-              <span className="text-2xl font-bold">$120</span>
-                <span className="mx-3 text-gray-500 line-through">$150</span>
+                <span className="text-2xl font-bold">$100</span>
+                <span className="mx-3 text-gray-500 line-through">$190</span>
               </div>
               <span className="text-sm font-semibold text-red-500">
-                30% OFF
+                40% OFF
               </span>
             </div>
             <p className="mb-6 text-gray-600">
@@ -340,7 +340,7 @@ const Product2 = () => {
               key={product.id}
               className="flex flex-col items-center justify-center p-1 transition-shadow duration-300 bg-white rounded shadow-lg jus hover:shadow-xl"
             >
-              <Link href={`/product/${product.id}`}>
+              <Link href={`/Product/Product${product.id}`}>
                 <Image
                   src={product.image}
                   alt={product.name}

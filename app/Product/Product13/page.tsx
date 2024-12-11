@@ -18,7 +18,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-const Product1 = () => {
+const Product2 = () => {
   const [quantity, setQuantity] = useState(1);
 
   const handleQuantityChange = (type: "increment" | "decrement") => {
@@ -27,46 +27,38 @@ const Product1 = () => {
     );
   };
 
-  const [selectedColor, setSelectedColor] = useState<string>("brown");
+  const [selectedColor, setSelectedColor] = useState<string>("blue");
   const [selectedSize, setSelectedSize] = useState<string>("Medium");
   const [selectedImage, setSelectedImage] = useState<string>(
-    "https://s3-alpha-sig.figma.com/img/21d6/bcec/533545a2b1e10e90b8059bc1bc97eab5?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PwSkNZuEpNHoUhWJRCYDcRS4LtWawCWpXaS68hDv2IS33ta5lFCZiCcFpvkNO7ncNrY9Y2exa1AzHJM3BRy0Lfng30cBG787Xiq1rmYy25J-PQdfisKietiEtTTQYoN0ssFYJfWlX9Le60-dHNYeBSI4hQJqJYzuFpojY-EkEWcl4vsC3ffsoJxDU0eFB9YaTQ0WNyswsYMe~3fzJ-KM2s3fRhadwXMoPR3lc9xg8Gy1NsLslrVY6RkhMVASlWJ6IRxix7DtKiTpJe8JK66YgyyGzKR6Z~ZfJpH62z0Cz3Hpcv3mulfXqoIYE1HfUPRdWKzZh8lPvOWhGJyOcFvE-w__"
+    "/images/shirt6.png",
   );
 
   const sizes = ["Small", "Medium", "Large", "X-Large"];
 
   const colors = [
-    { name: "brown", bgColor: "bg-[#4F4631]" },
+    { name: "blue", bgColor: "bg-[#1d4ed8]" },
+    { name: "peach", bgColor: "bg-[#fed7aa]" },
     { name: "green", bgColor: "bg-[#314F4A]" },
-    { name: "blue", bgColor: "bg-[#31344F]" },
   ];
 
   const images = [
     {
-      src: "https://s3-alpha-sig.figma.com/img/21d6/bcec/533545a2b1e10e90b8059bc1bc97eab5?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PwSkNZuEpNHoUhWJRCYDcRS4LtWawCWpXaS68hDv2IS33ta5lFCZiCcFpvkNO7ncNrY9Y2exa1AzHJM3BRy0Lfng30cBG787Xiq1rmYy25J-PQdfisKietiEtTTQYoN0ssFYJfWlX9Le60-dHNYeBSI4hQJqJYzuFpojY-EkEWcl4vsC3ffsoJxDU0eFB9YaTQ0WNyswsYMe~3fzJ-KM2s3fRhadwXMoPR3lc9xg8Gy1NsLslrVY6RkhMVASlWJ6IRxix7DtKiTpJe8JK66YgyyGzKR6Z~ZfJpH62z0Cz3Hpcv3mulfXqoIYE1HfUPRdWKzZh8lPvOWhGJyOcFvE-w__",
+      src: "/images/shirt6.png",
       alt: "Main T-shirt Image",
-    },
-    {
-      src: "https://s3-alpha-sig.figma.com/img/51c4/5a78/b417beff6f8fa6310534f3755fd23c5a?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UCR12hX19GOL128neDSv~AqvVH4YKlD5sumo0PhggWrJruaLjeBR37FTDJoJfmJOmuDdabI2w-IeIqzUQZhNpjvvch3TyineDSYmhWrf48323dUGhozaTZVhLRi6M3E~HMf-3cIZAr7UUdnyk8p7eXz6o6abLI4m7W6Chv66PXMZJFWrhHF98wRj8s95aVHECWxsXNBMXmW7YrjZlzozTO-lEyLwPcaOG0Jo6UQQrnnUCTXg95tFHhJXFlHoYXKa98anrxIOion7p1BJQ04lSTDbXQDJmr5Ynx2O6~gLlg5Bg8mTW3-qJUxAHYshgtOUKw1P0yHOvtEpX6tP0QnMTA__",
-      alt: "Main T-shirt Image",
-    },
-    {
-      src: "https://s3-alpha-sig.figma.com/img/52ce/3b46/9d8d7ff6e33f95a574450e07218fc909?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hZu7rdHCUdOpj~dOuSdey2Wknxur0p7~P8GP1y8ILnRMG9wTJNNFR1wtfkv2XC6AA0SMbicjYV9qdt7Avu2VYZLsHbZjuOMefSBcKWwBSdjGLTnZqS2CJzTlKxmLfSQWkr52DmZj4ebGnCaHIDa2snL3ZxAdE1jrTaQ8NivkxYteJaSLtJuzsu3meFd1JFWhZ2efDLYyT1bpt0ZVjSmCs5~zoW4WBZ3rVP4cyKt04kmX8PX7J4sUIhidK4tmL6rPqnVQfoDOYaGc1njdmPfuoqTfexOUq9kCQggV4XhHd2xpzvVbtKAIyveWyMwPwS0MWR8OdyTnKxlU-BSMF9zfuA__",
-      alt: "Main T-shirt Image",
-    },
+    }
   ];
 
   const products = [
     {
       id: "1",
-      name: "Polo with Contrast Trims",
+      name: "Viscose blend shirt",
       ratestar: "★★★★",
       rating: 4,
-      price: "$212",
-      fakeprice: "$242",
-      discount: "-20%",
+      price: "$100",
+      fakeprice: "$190",
+      discount: "-40%",
       image:
-        "https://s3-alpha-sig.figma.com/img/15e6/8c10/3095df99e905b164718348af952a0f64?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=T1SPPj5Gl6XufUX6ndp-IXbtvT-h~9o2Rp~48If3vrL918Y2bgHIxWgwNixXSKwa-1m-AxfB~~O-B00Bdj~OGDjUZXX1N2lg64ne4m3sQRhm1A8M7XxCZyHpMngsNYgqM29CBxwewbJRbS4Ld0pskjDfDXzQ9Wqt94mhIP3f3hMLfe5nvwZLy0it51WCS9BozJV29oVqsOgHbS9kFI~2K70RpmgxGycfmQcoJZkBtNLMIGtDVngnltdAaPFBoRQ4vjmcFoFXZkU~e5jjYiVBEzMx8FyQ3yvNIajFsKo8Jdd02Zn5SIPe2vDHcoWcS10CjePniSNLA8B9s5qcfSI5Gg__",
+        "/images/shirt11.png",
     },
     {
       id: "2",
@@ -74,7 +66,6 @@ const Product1 = () => {
       ratestar: "★★★☆",
       rating: 3.5,
       price: "$145",
-
       image:
         "https://s3-alpha-sig.figma.com/img/f04a/017d/b094f9a20c2328f54a31b153619784f3?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TdXM50mhn6bTCgy5ZIKXsA-QjkRV4OaWX-Cnze9In8KoiidKM66~GMFQpGbd092AChJXdOH87aE7q6hd4B1aki0Zz21BapPXWfD-ZAzl0lGNR~NulEIkdSnE0jX-oJqDrfSsv-jSbNtcdHYlXxSvFTZm-AB00loKN8T-Mhiy9cl866BvdooVFZzcYdQ~1RiMRLltq2fST3WpaC9SBLc~x-TGafP45Zx4drobNz~D3j59Pp9iOCBHkQ9haqy425Ct361dCDYxZr626Le81QLSCBQRdkwfU1Z2aniwh1PeZn~oL6HzotM1wzQDPrdZkY~jkuEs62dpjO-DdRcUCOah6Q__",
     },
@@ -175,7 +166,7 @@ const Product1 = () => {
           {/* Product Details */}
           <div>
             <h1 className="mb-2 text-2xl font-extrabold font-bold-1">
-              ONE LIFE GRAPHIC T-SHIRT
+            Polo with Contrast Trims
             </h1>
             <div className="flex items-center mb-4">
               <div className="flex text-yellow-500">
@@ -189,12 +180,8 @@ const Product1 = () => {
             </div>
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-4">
-                <span className="text-2xl font-bold">$260</span>
-                <span className="mx-3 text-gray-500 line-through">$300</span>
+                <span className="text-2xl font-bold">$212</span>
               </div>
-              <span className="text-sm font-semibold text-red-500">
-                40% OFF
-              </span>
             </div>
             <p className="mb-6 text-gray-600">
               This graphic t-shirt is perfect for any occasion. Crafted from
@@ -348,7 +335,7 @@ const Product1 = () => {
               key={product.id}
               className="flex flex-col items-center justify-center p-1 transition-shadow duration-300 bg-white rounded shadow-lg jus hover:shadow-xl"
             >
-              <Link href={`/product/${product.id}`}>
+              <Link href={`/Product/Product${product.id}`}>
                 <Image
                   src={product.image}
                   alt={product.name}
@@ -386,4 +373,4 @@ const Product1 = () => {
   );
 };
 
-export default Product1;
+export default Product2;

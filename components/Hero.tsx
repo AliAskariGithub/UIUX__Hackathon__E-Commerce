@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -25,12 +26,14 @@ const Hero = () => {
             </p>
 
             <div className="flex justify-center md:justify-start w-full">
+              <Link href={"/Product"}>
               <Button
                 variant="default"
                 className="w-full md:w-auto px-6 py-2 text-xs md:text-sm rounded-full"
               >
                 Shop Now
               </Button>
+              </Link>
             </div>
           </div>
 

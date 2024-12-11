@@ -27,25 +27,25 @@ const Product2 = () => {
     );
   };
 
-  const [selectedColor, setSelectedColor] = useState<string>("brown");
+  const [selectedColor, setSelectedColor] = useState<string>("peach");
   const [selectedSize, setSelectedSize] = useState<string>("Medium");
   const [selectedImage, setSelectedImage] = useState<string>(
-    "https://s3-alpha-sig.figma.com/img/aecd/8196/485b30fd30b3226e09bb8f8e494c260b?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=E00uJe4ScIJlOs2OZBX804wKT5KHfRmXE85TrrOIBj2NsxTb9e-AI9Nz8BCZEjDXtB8GAh48M9m-2EpjFkQLUSO3oCc~OvsDJ241EMvsgtWKA4GDflZnmiEmXSqt~YLnZcnYLExdaZfQM51bJj3utafVWSBuNNIswABuvWmVBt1vMvveA~ua9KLPgdOoE2NjV3zhFFkwQ~OabH2NUXvySpDPyVzjMZRkpoCPjme~cSwNI2LZuBmnCei1MvoGRGuVUe6E6rQtwtcMjMBOPhcrpNgtx0IDmSX4SiGizGiDq-MpJuBZiM2qyX1lfFbuHR5iH4YW31927b~7rI7BC6c4wQ__"
+    "/images/shirt12.png",
   );
 
   const sizes = ["Small", "Medium", "Large", "X-Large"];
 
   const colors = [
-    { name: "brown", bgColor: "bg-[#4F4631]" },
+    { name: "peach", bgColor: "bg-[#fed7aa]" },
     { name: "green", bgColor: "bg-[#314F4A]" },
     { name: "blue", bgColor: "bg-[#31344F]" },
   ];
 
   const images = [
     {
-      src: "https://s3-alpha-sig.figma.com/img/aecd/8196/485b30fd30b3226e09bb8f8e494c260b?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=E00uJe4ScIJlOs2OZBX804wKT5KHfRmXE85TrrOIBj2NsxTb9e-AI9Nz8BCZEjDXtB8GAh48M9m-2EpjFkQLUSO3oCc~OvsDJ241EMvsgtWKA4GDflZnmiEmXSqt~YLnZcnYLExdaZfQM51bJj3utafVWSBuNNIswABuvWmVBt1vMvveA~ua9KLPgdOoE2NjV3zhFFkwQ~OabH2NUXvySpDPyVzjMZRkpoCPjme~cSwNI2LZuBmnCei1MvoGRGuVUe6E6rQtwtcMjMBOPhcrpNgtx0IDmSX4SiGizGiDq-MpJuBZiM2qyX1lfFbuHR5iH4YW31927b~7rI7BC6c4wQ__",
-      alt: "Polo with Tipping Details",
-    },
+      src: "/images/shirt12.png",
+      alt: "Main T-shirt Image",
+    }
   ];
 
   const products = [
@@ -110,7 +110,7 @@ const Product2 = () => {
             <BreadcrumbSeparator />
 
             <BreadcrumbItem>
-              <BreadcrumbLink href="/Men">Men</BreadcrumbLink>
+              <BreadcrumbLink href="/Men">Women</BreadcrumbLink>
             </BreadcrumbItem>
 
             <BreadcrumbSeparator />
@@ -167,7 +167,7 @@ const Product2 = () => {
           {/* Product Details */}
           <div>
             <h1 className="mb-2 text-2xl font-extrabold font-bold-1">
-              Polo with Tipping Details
+            Mock Neck Zipper Sweatshirt
             </h1>
             <div className="flex items-center mb-4">
               <div className="flex text-yellow-500">
@@ -181,8 +181,12 @@ const Product2 = () => {
             </div>
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-4">
-                <span className="text-2xl font-bold">$180</span>
+                <span className="text-2xl font-bold">$150</span>
+                <span className="mx-3 text-gray-500 line-through">$180</span>
               </div>
+              <span className="text-sm font-semibold text-red-500">
+                20% OFF
+              </span>
             </div>
             <p className="mb-6 text-gray-600">
               This graphic t-shirt is perfect for any occasion. Crafted from
@@ -336,7 +340,7 @@ const Product2 = () => {
               key={product.id}
               className="flex flex-col items-center justify-center p-1 transition-shadow duration-300 bg-white rounded shadow-lg jus hover:shadow-xl"
             >
-              <Link href={`/product/${product.id}`}>
+              <Link href={`/Product/Product${product.id}`}>
                 <Image
                   src={product.image}
                   alt={product.name}

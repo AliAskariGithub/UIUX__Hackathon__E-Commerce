@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative">
+    <div className="relative">
       <div className="flex items-center justify-between px-6 py-4 bg-white md:hidden">
         <div className="flex items-center space-x-4">
           <button
@@ -65,7 +65,7 @@ const Navbar = () => {
             Shop <RiArrowDropDownLine className="inline" />
           </Link>
           <Link
-            href="#"
+            href="#onsale"
             className="block text-gray-700 transition duration-150 hover:text-black"
           >
             On Sale
@@ -111,7 +111,7 @@ const Navbar = () => {
               Shop <RiArrowDropDownLine />
             </Link>
             <Link
-              href="#"
+              href="#onsale"
               className="text-gray-700 transition duration-150 hover:text-black underline-hover"
             >
               On Sale
@@ -153,7 +153,7 @@ const Navbar = () => {
           />
         </div>
       </div>
-    </nav>
+    </div>
   );
 };
 

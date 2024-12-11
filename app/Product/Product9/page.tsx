@@ -27,25 +27,25 @@ const Product2 = () => {
     );
   };
 
-  const [selectedColor, setSelectedColor] = useState<string>("brown");
+  const [selectedColor, setSelectedColor] = useState<string>("orange");
   const [selectedSize, setSelectedSize] = useState<string>("Medium");
   const [selectedImage, setSelectedImage] = useState<string>(
-    "https://s3-alpha-sig.figma.com/img/f04a/017d/b094f9a20c2328f54a31b153619784f3?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TdXM50mhn6bTCgy5ZIKXsA-QjkRV4OaWX-Cnze9In8KoiidKM66~GMFQpGbd092AChJXdOH87aE7q6hd4B1aki0Zz21BapPXWfD-ZAzl0lGNR~NulEIkdSnE0jX-oJqDrfSsv-jSbNtcdHYlXxSvFTZm-AB00loKN8T-Mhiy9cl866BvdooVFZzcYdQ~1RiMRLltq2fST3WpaC9SBLc~x-TGafP45Zx4drobNz~D3j59Pp9iOCBHkQ9haqy425Ct361dCDYxZr626Le81QLSCBQRdkwfU1Z2aniwh1PeZn~oL6HzotM1wzQDPrdZkY~jkuEs62dpjO-DdRcUCOah6Q__"
+    "/images/shirt5.png",
   );
 
   const sizes = ["Small", "Medium", "Large", "X-Large"];
 
   const colors = [
-    { name: "brown", bgColor: "bg-[#4F4631]" },
+    { name: "orange", bgColor: "bg-[#ea580c]" },
+    { name: "peach", bgColor: "bg-[#fed7aa]" },
     { name: "green", bgColor: "bg-[#314F4A]" },
-    { name: "blue", bgColor: "bg-[#31344F]" },
   ];
 
   const images = [
     {
-      src: "https://s3-alpha-sig.figma.com/img/f04a/017d/b094f9a20c2328f54a31b153619784f3?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TdXM50mhn6bTCgy5ZIKXsA-QjkRV4OaWX-Cnze9In8KoiidKM66~GMFQpGbd092AChJXdOH87aE7q6hd4B1aki0Zz21BapPXWfD-ZAzl0lGNR~NulEIkdSnE0jX-oJqDrfSsv-jSbNtcdHYlXxSvFTZm-AB00loKN8T-Mhiy9cl866BvdooVFZzcYdQ~1RiMRLltq2fST3WpaC9SBLc~x-TGafP45Zx4drobNz~D3j59Pp9iOCBHkQ9haqy425Ct361dCDYxZr626Le81QLSCBQRdkwfU1Z2aniwh1PeZn~oL6HzotM1wzQDPrdZkY~jkuEs62dpjO-DdRcUCOah6Q__",
-      alt: "Gradient Graphic T-shirt",
-    },
+      src: "/images/shirt5.png",
+      alt: "Main T-shirt Image",
+    }
   ];
 
   const products = [
@@ -66,7 +66,6 @@ const Product2 = () => {
       ratestar: "★★★☆",
       rating: 3.5,
       price: "$145",
-
       image:
         "https://s3-alpha-sig.figma.com/img/f04a/017d/b094f9a20c2328f54a31b153619784f3?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TdXM50mhn6bTCgy5ZIKXsA-QjkRV4OaWX-Cnze9In8KoiidKM66~GMFQpGbd092AChJXdOH87aE7q6hd4B1aki0Zz21BapPXWfD-ZAzl0lGNR~NulEIkdSnE0jX-oJqDrfSsv-jSbNtcdHYlXxSvFTZm-AB00loKN8T-Mhiy9cl866BvdooVFZzcYdQ~1RiMRLltq2fST3WpaC9SBLc~x-TGafP45Zx4drobNz~D3j59Pp9iOCBHkQ9haqy425Ct361dCDYxZr626Le81QLSCBQRdkwfU1Z2aniwh1PeZn~oL6HzotM1wzQDPrdZkY~jkuEs62dpjO-DdRcUCOah6Q__",
     },
@@ -167,7 +166,7 @@ const Product2 = () => {
           {/* Product Details */}
           <div>
             <h1 className="mb-2 text-2xl font-extrabold font-bold-1">
-              Gradient Graphic T-shirt
+            Plane Ornage Shirt
             </h1>
             <div className="flex items-center mb-4">
               <div className="flex text-yellow-500">
@@ -177,12 +176,16 @@ const Product2 = () => {
                 <AiFillStar />
                 <FaRegStarHalfStroke />
               </div>
-              <p className="ml-2 text-gray-600">4.5/5</p>
+              <p className="ml-2 text-gray-600">5/5</p>
             </div>
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-4">
-                <span className="text-2xl font-bold">$120</span>
+                <span className="text-2xl font-bold">$212</span>
+                <span className="mx-3 text-gray-500 line-through">$232</span>
               </div>
+              <span className="text-sm font-semibold text-red-500">
+                20% OFF
+              </span>
             </div>
             <p className="mb-6 text-gray-600">
               This graphic t-shirt is perfect for any occasion. Crafted from
@@ -336,7 +339,7 @@ const Product2 = () => {
               key={product.id}
               className="flex flex-col items-center justify-center p-1 transition-shadow duration-300 bg-white rounded shadow-lg jus hover:shadow-xl"
             >
-              <Link href={`/product/${product.id}`}>
+              <Link href={`/Product/Product${product.id}`}>
                 <Image
                   src={product.image}
                   alt={product.name}
